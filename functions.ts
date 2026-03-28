@@ -16,3 +16,15 @@ function logMessage(): void {
 function sumArray(numbers: number[]): number {
     return numbers.reduce((acc, num) => acc + num, 0);
 }
+
+//object in typescript are typed
+let alice: { name: string; age: number } = {
+    name: "Alice",
+    age: 30,
+};
+
+function printUser(user: {name: string, age: number}) {
+    console.log(`Name: ${user.name}, Age: ${user.age}`);
+}
+
+printUser(alice);
