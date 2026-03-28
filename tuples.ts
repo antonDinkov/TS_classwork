@@ -7,4 +7,3 @@ type TPerson = [string, number]; // [name, age]
 let bob: TPerson = ["Bob", 25];
 let carol: TPerson = ["Carol", 30];
 console.log(bob, carol);
-// [ 'Bob', 25 ] [ 'Carol', 30 ]
