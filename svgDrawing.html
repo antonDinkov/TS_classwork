@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>SVG Drawing - Car</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 16px;
+        }
+
+        #drawing {
+            border: 1px solid #aaa;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>SVG Car Drawing</h1>
+    <div id="drawing"></div>
+
+    <script type="module">
+        import { SVGDrawing, Rectangle, Circle, Line, Polygon } from './svgDrawing.js';
+
+        const drawing = new SVGDrawing();
+        drawing.add(new Rectangle(80, 120, 240, 60, '#0074D9'));
+        drawing.add(new Polygon(120, 120, 120, 40, '#7FDBFF'));
+        drawing.add(new Rectangle(130, 128, 45, 25, '#BFDFFF'));
+        drawing.add(new Rectangle(205, 128, 45, 25, '#BFDFFF'));
+        drawing.add(new Circle(135, 190, 20, '#111'));
+        drawing.add(new Circle(265, 190, 20, '#111'));
+        drawing.add(new Line(80, 180, 320, 180, '#000', 3));
+
+        document.getElementById('drawing').innerHTML = drawing.toSVG(400, 250);
+        const svg = drawing.toSVG(400, 250);
+        console.log(svg);
+    </script>
+</body>
+
+</html>
